@@ -52,6 +52,7 @@ public class Inventory : MonoBehaviour
             {
                 inventory.Remove(item);
                 itemDictionary.Remove(itemData);
+                Debug.Log($"{item.itemData.displayName} total stack is now {item.stackSize}");
             }
             OnInvetoryChange?.Invoke(inventory);
         }

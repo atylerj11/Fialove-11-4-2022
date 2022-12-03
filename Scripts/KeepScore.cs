@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class KeepScore : MonoBehaviour
 {
-    public static float score = 0f;
+    public static float score = 0.00f;
     public TMP_Text displyTxt;
 
     public TMP_Text HighTxt;
@@ -36,7 +36,7 @@ public class KeepScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        displyTxt.text = "$" + score;
+        displyTxt.text = "$" + score.ToString("F2");
 
         //if (score > PlayerPrefs.GetFloat("HighScore",0))
         //{
