@@ -30,13 +30,14 @@ public class PlaceDrink : MonoBehaviour
         else if (col.gameObject.tag == "Player" && Input.GetKey(KeyCode.E))
         {
 
+            
+
+            if (on == true) {
+                KeepScore.score += value;
+            }
             cup.SetActive(false);
             on = false;
 
-            if (on == false) {
-                KeepScore.score += value;
-            }
-            
 
         }
 
