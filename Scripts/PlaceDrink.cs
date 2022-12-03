@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlaceDrink : MonoBehaviour
 {
+    public float value = 5.00f;
     public GameObject cup;
-    //private bool on = false;
+    private bool on = false;
     //public Vector2 spawn;
 
 
@@ -21,7 +22,7 @@ public class PlaceDrink : MonoBehaviour
 
             //Destroy(cup, 10f);
             
-            //on = true;
+            on = true;
 
         }
 
@@ -30,9 +31,15 @@ public class PlaceDrink : MonoBehaviour
         {
 
             cup.SetActive(false);
-            //on = false;
+            on = false;
+
+            if (on == false) {
+                KeepScore.score += value;
+            }
+            
 
         }
+
 
     }
 
