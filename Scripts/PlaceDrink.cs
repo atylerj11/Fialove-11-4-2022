@@ -21,7 +21,7 @@ public class PlaceDrink : MonoBehaviour
     void OnTriggerStay2D(Collider2D col)
     {
 
-        if (col.gameObject.tag == "Player" && cup.tag == "drink" && Input.GetKey(KeyCode.Alpha1) || Input.GetKey(KeyCode.Keypad1) && InventoryItem.num > 0/* && !on*/)
+        if (col.gameObject.tag == "Player" && cup.tag == "drink" && Input.GetKey(KeyCode.Alpha1) || Input.GetKey(KeyCode.Keypad1) && InventoryItem.num > 0)
         {
             if (on == false)
             {
@@ -53,7 +53,7 @@ public class PlaceDrink : MonoBehaviour
         }
 
 
-        else if (col.gameObject.tag == "Player" && toast.tag == "Toast" && Input.GetKey(KeyCode.Alpha2) || Input.GetKey(KeyCode.Keypad2) && InventoryItem.num > 0/* && !on*/)
+        else if (col.gameObject.tag == "Player" && toast.tag == "Toast" && Input.GetKey(KeyCode.Alpha2) || Input.GetKey(KeyCode.Keypad2) && InventoryItem.num > 0)
         {
             if (on == false)
             {
@@ -85,7 +85,7 @@ public class PlaceDrink : MonoBehaviour
 
         }
 
-        else if (col.gameObject.tag == "Player" && cake.tag == "Cake" && Input.GetKey(KeyCode.Alpha3) || Input.GetKey(KeyCode.Keypad3) && InventoryItem.num > 0/* && !on*/)
+        else if (col.gameObject.tag == "Player" && cake.tag == "Cake" && Input.GetKey(KeyCode.Alpha3) || Input.GetKey(KeyCode.Keypad3) && InventoryItem.num > 0)
         {
             if (on == false)
             {
