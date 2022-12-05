@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class SceneOven : MonoBehaviour
 {
     public GameObject txtToDisplay;  //display the UI text
     private bool PlayerInZone;
+
+    public GameObject ScreenG;
+    public GameObject Current;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +25,11 @@ public class SceneOven : MonoBehaviour
     {
          if (PlayerInZone && Input.GetKeyDown(KeyCode.F))
         {
-            SceneManager.LoadScene("Oven");
+            //SceneManager.LoadScene("Oven");
+
+
+            ScreenG.SetActive(true);
+            Current.SetActive(false);
         }
     }
 

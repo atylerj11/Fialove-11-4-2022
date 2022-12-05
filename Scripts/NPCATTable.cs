@@ -174,6 +174,7 @@ public class NPCATTable : MonoBehaviour
     public void Yo() {
 
         thank.SetActive(false);
+        xcount = Random.Range(1, 4);
 
 
     }
