@@ -16,12 +16,19 @@ public class CookingMeter : MonoBehaviour
     private float amtTempature = 0.0f;
     private float HeatingSpped = 100.0f;
 
+    public GameObject ScreenG;
+    public GameObject Current;
+
+    public GameObject food;
+
     // Update is called once per frame
     void Update()
     {
         if (Cooking) {
             CookingActive();
         }
+
+
     }
 
     void CookingActive() {
@@ -55,8 +62,20 @@ public class CookingMeter : MonoBehaviour
 
 
     public void EndHeating() {
+
+        if (amtTempature >= 57.00f && amtTempature <= 81.00f)
+        {
+            Instantiate(food, transform.position, transform.rotation);
+            Instantiate(food, transform.position, transform.rotation);
+            Instantiate(food, transform.position, transform.rotation);
+            ScreenG.SetActive(false);
+            Current.SetActive(true);
+
+        }
         Cooking = false;
         tempature.text = amtTempature.ToString("F0");
-    
+
+
+
     }
 }
